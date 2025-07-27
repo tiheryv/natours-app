@@ -1,5 +1,12 @@
 {
-  "singleQuote": true,
+  "printWidth": 60,
   "tabWidth": 2,
-  "printWidth": 6
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "bracketSpacing": true,
+  "arrowParens": "always",
+  "proseWrap": "always",
+  "editor.formatOnSave": true
 }
