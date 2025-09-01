@@ -1,11 +1,25 @@
 const express = require('express');
-const { getAllTours, createTour, getTour, updateTour, deleteTour, aliasTopTours } = require('./../controllers/tourController');
+const { getAllTours, createTour, getTour, updateTour, deleteTour, aliasTopTours, getTourStats, getMonthlyPlan } = require('./../controllers/tourController');
 const router = express.Router();
 
 // Middleware for specific routes
 router
     .route('/top-5-cheap').
     get(aliasTopTours, getAllTours);
+
+router
+    .route('/top-stats').
+    get(getTourStats);
+
+
+router
+    .route('/monthly-plan/:year').
+    get(getMonthlyPlan);
+
+
+router
+    .route('/top-stats').
+    get(getTourStats);
 
 router
     .route('/')
