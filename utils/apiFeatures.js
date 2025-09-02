@@ -32,8 +32,10 @@ class APIFeatures {
     limitFields() {
         if (this.queryString.fields) {
             const fields = this.queryString.fields.split(',').join(' ');
+            // Select only the specified fields
             this.query = this.query.select(fields);
         } else {
+            // Exclude the __v field by default
             this.query = this.query.select('-__v');
         }
         return this;

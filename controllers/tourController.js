@@ -55,9 +55,6 @@ exports.getTour = async (req, res) => {
 
 exports.createTour = async (req, res) => {
 
-    // const newTour = new Tour({})
-    // newTour.save()
-
     try {
         const newTour = await Tour.create(req.body);
 
